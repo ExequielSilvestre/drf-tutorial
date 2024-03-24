@@ -14,7 +14,7 @@ class Projects(models.Model):
     name = models.CharField(max_length=100)
     active = models.BooleanField(default=True)
     finish_date = models.DateField()
-    owner = models.ForeignKey('auth.User', related_name='snippets', on_delete=models.CASCADE)
-    
+    owner = models.ForeignKey('auth.User', related_name='projects', on_delete=models.CASCADE)
+
     class Meta:
         ordering = ['id']
